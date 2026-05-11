@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock.tech - Novo Produto</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS global (único para todas as telas) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================================================
+         MENU LATERAL (SIDEBAR)
+         ========================================================= -->
+    <nav class="sidebar">
+
+        <div class="logo">
+            <i class="fa-solid fa-box-archive"></i>
+            <h2 class="logo-text">Stock<span>.tech</span></h2>
+        </div>
+
+        <div class="menu-container">
+
+            <div class="categoria">
+                <p class="titulo-categoria">Visão Geral</p>
+                <ul>
+                    <li><a href="index.html"><i class="fa-solid fa-chart-line"></i> <span>Dashboard</span></a></li>
+                    <li><a href="#"><i class="fa-solid fa-money-bill-wave"></i> <span>Financeiro</span></a></li>
+                </ul>
+            </div>
+
+            <div class="categoria">
+                <p class="titulo-categoria">Estoque</p>
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-truck-ramp-box"></i> <span>Movimentações</span></a></li>
+                    <li><a href="produtos.html" class="ativo"><i class="fa-solid fa-box-open"></i> <span>Produtos</span></a></li>
+                </ul>
+            </div>
+
+            <div class="categoria">
+                <p class="titulo-categoria">Comercial</p>
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-cart-shopping"></i> <span>Pedido de Vendas</span></a></li>
+                    <li><a href="#"><i class="fa-solid fa-address-book"></i> <span>Contatos</span></a></li>
+                </ul>
+            </div>
+
+            <div class="categoria">
+                <p class="titulo-categoria">Suporte</p>
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-circle-question"></i> <span>FAQ</span></a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="sidebar-footer">
+            <a href="#" class="btn-sair">
+                <i class="fa-solid fa-right-from-bracket"></i> <span>Desconectar</span>
+            </a>
+        </div>
+
+    </nav>
+
+    <!-- =========================================================
+         ÁREA DE CONTEÚDO - CADASTRO DE PRODUTO
+         ========================================================= -->
+    <main class="content">
+
+        <header class="produtos-header">
+            <h1 id="tituloPagina">Novo Produto</h1>
+            <div class="header-icons">
+                <i class="fa-solid fa-bell"></i>
+                <i class="fa-solid fa-gear"></i>
+                <i class="fa-solid fa-user"></i>
+            </div>
+        </header>
+
+        <section class="form-wrapper">
+
+            <a href="produtos.html" class="link-voltar">
+                <i class="fa-solid fa-arrow-left"></i> Voltar para produtos
+            </a>
+
+            <form id="formProduto" class="form-produto">
+
+                <div class="form-topo">
+
+                    <!-- Upload de imagem -->
+                    <div class="upload-imagem">
+                        <label for="inputImagem" class="upload-label">
+                            <div class="upload-preview" id="uploadPreview">
+                                <i class="fa-solid fa-camera"></i>
+                                <span class="upload-plus">+</span>
+                            </div>
+                            <span class="upload-btn">Enviar imagem</span>
+                        </label>
+                        <input type="file" id="inputImagem" accept="image/*" hidden>
+                    </div>
+
+                    <!-- Campos do topo -->
+                    <div class="form-campos-topo">
+                        <div class="form-grupo full">
+                            <label for="nomeProduto">Nome do Produto</label>
+                            <input type="text" id="nomeProduto" placeholder="Nome do Produto" required>
+                        </div>
+
+                        <div class="form-linha">
+                            <div class="form-grupo">
+                                <label for="codigoProduto">Código do Produto</label>
+                                <input type="text" id="codigoProduto" placeholder="Código do Produto" required>
+                            </div>
+                            <div class="form-grupo">
+                                <label for="precoCusto">Preço de Custo</label>
+                                <input type="number" id="precoCusto" step="0.01" min="0" placeholder="Preço de Custo" required>
+                            </div>
+                        </div>
+
+                        <div class="form-linha">
+                            <div class="form-grupo">
+                                <label for="categoria">Categoria</label>
+                                <input type="text" id="categoria" placeholder="Categoria" required>
+                            </div>
+                            <div class="form-grupo">
+                                <label for="unidade">Quantidade em estoque</label>
+                                <input type="text" id="unidade" placeholder="Unidade">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Campos inferiores -->
+                <div class="form-linha">
+                    <div class="form-grupo">
+                        <label for="precoVenda">Preço de venda</label>
+                        <input type="number" id="precoVenda" step="0.01" min="0" placeholder="Preço de venda" required>
+                    </div>
+                    <div class="form-grupo">
+                        <label for="quantidade">Quantidade</label>
+                        <input type="number" id="quantidade" min="0" placeholder="Quantidade" required>
+                    </div>
+                </div>
+
+                <div class="form-grupo full">
+                    <label for="descricao">Descrição</label>
+                    <textarea id="descricao" rows="3"
+                              placeholder="Descrição do produto (exemplo: tamanho, cor, peso)"></textarea>
+                </div>
+
+                <div class="form-acoes">
+                    <a href="produtos.html" class="btn-cancelar">Cancelar</a>
+                    <button type="submit" class="btn-salvar">Salvar Produto</button>
+                </div>
+
+            </form>
+
+        </section>
+
+        <footer class="produtos-footer">
+            <span>&copy; <span id="anoAtual"></span> Stock.Tech &middot; Todos os direitos reservados</span>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

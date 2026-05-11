@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock.tech - Produtos</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS global (único para todas as telas) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================================================
+         MENU LATERAL (SIDEBAR)
+         ========================================================= -->
+    <nav class="sidebar">
+
+        <div class="logo">
+            <i class="fa-solid fa-box-archive"></i>
+            <h2 class="logo-text">Stock<span>.tech</span></h2>
+        </div>
+
+        <div class="menu-container">
+
+            <div class="categoria">
+                <p class="titulo-categoria">Visão Geral</p>
+                <ul>
+                    <li><a href="index.html"><i class="fa-solid fa-chart-line"></i> <span>Dashboard</span></a></li>
+                    <li><a href="#"><i class="fa-solid fa-money-bill-wave"></i> <span>Financeiro</span></a></li>
+                </ul>
+            </div>
+
+            <div class="categoria">
+                <p class="titulo-categoria">Estoque</p>
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-truck-ramp-box"></i> <span>Movimentações</span></a></li>
+                    <li><a href="produtos.html" class="ativo"><i class="fa-solid fa-box-open"></i> <span>Produtos</span></a></li>
+                </ul>
+            </div>
+
+            <div class="categoria">
+                <p class="titulo-categoria">Comercial</p>
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-cart-shopping"></i> <span>Pedido de Vendas</span></a></li>
+                    <li><a href="#"><i class="fa-solid fa-address-book"></i> <span>Contatos</span></a></li>
+                </ul>
+            </div>
+
+            <div class="categoria">
+                <p class="titulo-categoria">Suporte</p>
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-circle-question"></i> <span>FAQ</span></a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="sidebar-footer">
+            <a href="#" class="btn-sair">
+                <i class="fa-solid fa-right-from-bracket"></i> <span>Desconectar</span>
+            </a>
+        </div>
+
+    </nav>
+
+    <!-- =========================================================
+         ÁREA DE CONTEÚDO - LISTAGEM DE PRODUTOS
+         ========================================================= -->
+    <main class="content">
+
+        <header class="produtos-header">
+            <h1>Produtos</h1>
+            <div class="header-icons">
+                <i class="fa-solid fa-bell"></i>
+                <i class="fa-solid fa-gear"></i>
+                <i class="fa-solid fa-user"></i>
+            </div>
+        </header>
+
+        <section class="produtos-body">
+
+            <!-- Grade de cards -->
+            <div class="produtos-grid" id="produtosGrid">
+                <!-- Cards inseridos dinamicamente via JS -->
+            </div>
+
+            <!-- Coluna direita: botão de novo produto -->
+            <div class="produtos-acoes">
+                <a href="novo-produto.html" class="btn-novo-produto">
+                    <i class="fa-solid fa-plus"></i> Novo Produto
+                </a>
+            </div>
+
+        </section>
+
+        <footer class="produtos-footer">
+            <span>&copy; <span id="anoAtual"></span> Stock.Tech &middot; Todos os direitos reservados</span>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
